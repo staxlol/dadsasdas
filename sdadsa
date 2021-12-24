@@ -9,7 +9,7 @@ local LocalPlayer = Players.LocalPlayer
 local accomidationfactor = 0.12
 
 -- // Silent Aim Module
-local SilentAim = loadstring(game:HttpGet('https://raw.githubusercontent.com/staxlol/adjust1/main/adjustttt'))()
+local SilentAim = loadstring(game:HttpGet("https://raw.githubusercontent.com/adhadlol/adadadadaddada/main/dgdhdhdhhhd"))()
 SilentAim.TeamCheck = false
 -- // Metatable vars
 local mt = getrawmetatable(game)
@@ -112,14 +112,14 @@ function starnames()
         if table.find(ModIDS, Player.UserId) then
             if Player.Character then
                 if Player.Character.Parent.Name == 'Players' then
-                    Player.Character:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[]' .. Player.DisplayName)
+                    Player.Character:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[👑]' .. Player.DisplayName)
                 end
             end
         else
             if Player.Character then
                 if Player.Character.Parent.Name == 'Players' then
                     if not Player.Character.UpperTorso:FindFirstChild('OriginalSize') then
-                        Player.Character:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[]' .. Player.DisplayName)
+                        Player.Character:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[👑]' .. Player.DisplayName)
                     end
                 end
             end
